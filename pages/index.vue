@@ -1,6 +1,7 @@
 <template>
   <section>
     <h1 class="header">Nuxt TypeScript Starter</h1>
+    <nuxt-link to="/color-advisor">color advisor</nuxt-link>
     <div class="cards">
       <Card v-for="person in people" :key="person.id" :person="person"></Card>
     </div>
@@ -24,10 +25,12 @@ export default class extends Vue {
   @State people
 }
 </script>
-<style scoped>
+
+<style lang="scss" scoped>
 .header {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana,
     sans-serif;
+  color: $red;
 }
 
 .cards {
