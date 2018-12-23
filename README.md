@@ -1,4 +1,4 @@
-# micchi
+# sample-color-selection
 
 > Nuxt.js TypeScript project
 
