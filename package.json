@@ -2,17 +2,19 @@
   "name": "micchi",
   "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "normalize.css": "^8.0.1",
-    "nuxt": "^2.3.4",
-    "nuxt-property-decorator": "^1.2.0",
-    "vuex-class": "^0.3.0"
-  },
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "nuxt": "^2.3.4",
+    "nuxt-property-decorator": "^1.2.0",
+    "push-dir": "^0.4.1",
+    "vuex-class": "^0.3.0"
   },
   "devDependencies": {
     "@types/node": "^10.12.18",
