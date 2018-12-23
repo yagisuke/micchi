@@ -1,5 +1,5 @@
 <template>
-  <div class="hero">
+  <div class="hero" :style="{ 'background-image': `url(${$router.options.base}images/color-advisor/hero.jpeg)` }">
     <div class="hero-message">
       <h2>BEST. HAIR COLOR. ever</h2>
       <p>perfect shade is just a few questions away</p>
@@ -17,7 +17,6 @@ export default class extends Vue {}
 <style lang="scss" scoped>
 .hero {
   position: relative;
-  background-image: url('/images/color-advisor/hero.jpeg');
   background-repeat: no-repeat;
   background-size:  cover;
   background-position: center center;

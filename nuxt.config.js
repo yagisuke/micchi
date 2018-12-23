@@ -1,31 +1,15 @@
-const parseArgs = require('minimist')
-const argv = parseArgs(process.argv.slice(2), {
-  alias: {
-    H: 'hostname',
-    p: 'port'
-  },
-  string: ['H'],
-  unknown: parameter => false
-})
+var baseRoute = env => (env === 'GH_PAGES' ? '/sample-color-selection/' : '/')
 
-const port =
-  argv.port ||
-  process.env.PORT ||
-  process.env.npm_package_config_nuxt_port ||
-  '3000'
-const host =
-  argv.hostname ||
-  process.env.HOST ||
-  process.env.npm_package_config_nuxt_host ||
-  'localhost'
 module.exports = {
-  env: {
-    baseUrl:
-      process.env.BASE_URL ||
-      `http://${host}:${port}`
-  },
   head: {
     title: 'hair color',
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: baseRoute(process.env.DEPLOY_ENV) + 'favicon.ico'
+      }
+    ],
     meta: [
       { charset: 'utf-8' },
       {
@@ -39,6 +23,9 @@ module.exports = {
         content: 'Nuxt.js project'
       }
     ],
+  },
+  router: {
+    base: baseRoute(process.env.DEPLOY_ENV)
   },
   /*
   ** Customize the progress-bar color

@@ -2,7 +2,7 @@
   <div class="container">
     <header>
       <h1 class="title">
-        <img src="/images/logo.png" alt="hair color" class="logo" />
+        <img :src="`${$router.options.base}images/logo.png`" alt="hair color" class="logo" />
       </h1>
     </header>
     <nuxt/>
