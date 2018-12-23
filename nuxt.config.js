@@ -53,11 +53,9 @@ module.exports = {
   ],
   build: {},
   modules: [
-    '@nuxtjs/axios',
     ['nuxt-sass-resources-loader', [
       '~/assets/scss/config/variable.scss'
     ]],
     '~/modules/typescript.js'
-  ],
-  axios: {}
+  ]
 }

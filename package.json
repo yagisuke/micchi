@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@nuxtjs/axios": "^5.0.0",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.3.4",
     "nuxt-property-decorator": "^1.2.0",
