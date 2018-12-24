@@ -22,7 +22,7 @@
 
 .logo {
   width: auto;
-  height: 2em;
+  height: 3em;
 }
 </style>
 
