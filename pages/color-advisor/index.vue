@@ -95,24 +95,35 @@ export default class extends Vue {
     return [this.question1.answer, this.question2.answer, this.question3.answer].indexOf(null) === -1
   }
 
-  answer (question, index) {
+  answer (question: string, index: number) {
     this[question].answer = index
-
     const element = document.getElementById(question)
     if (!element) return
-    this.$nextTick(() => {
-      window.scrollTo(0, element.offsetTop + element.clientHeight)
-    })
+    this.$nextTick(() => (smoothScroll(element.offsetTop + element.clientHeight)))
   }
 
   next () {
-    let texts = [this.question1, this.question2, this.question3].map((val) => {
+    const texts = [this.question1, this.question2, this.question3].map((val) => {
       const index = val.answer
       return index !== null ? val.items[index].text : ''
     })
-
     window.alert(texts)
   }
+}
+
+const smoothScroll = (range: number) => {
+  const start = window.pageYOffset
+  const easeOut = p => p * (2 - p)
+  const diff = range - start
+  let position = 0
+  let progress = 0
+  const move = () => {
+    progress++
+    position = start + (diff * easeOut(progress / 40))
+    window.scrollTo(0, position)
+    if (position < range) window.requestAnimationFrame(move)
+  }
+  window.requestAnimationFrame(move)
 }
 </script>
 
@@ -180,7 +191,7 @@ export default class extends Vue {
   margin: 2em 0 1em;
   padding: 1.7em;
   font-size: 0.9em;
-  line-height: 1.3em; 
+  line-height: 1.3em 
 }
 
 .result-box {
