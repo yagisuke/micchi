@@ -115,8 +115,10 @@ const smoothScroll = (range: number) => {
   const start = window.pageYOffset
   const easeOut = p => p * (2 - p)
   const diff = range - start
+
   let position = 0
   let progress = 0
+
   const move = () => {
     progress++
     position = start + (diff * easeOut(progress / 40))
