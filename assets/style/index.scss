@@ -1,0 +1,22 @@
+@import 'fontello-codes';
+
+body {
+  font-family: 'Averta-Regular', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  font-size: $font-size-m;
+  color: $black;
+}
+
+a, 
+button,
+select {
+  cursor: pointer;
+}
+
+button {
+  &:focus {
+    outline: none;
+  }
+}

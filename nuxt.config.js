@@ -35,13 +35,13 @@ module.exports = {
   ** Build configuration
   */
   css: [
-    'normalize.css',
-    '~/assets/scss/main.scss'
+    'reset-css',
+    '~/assets/style/index.scss'
   ],
   build: {},
   modules: [
     ['nuxt-sass-resources-loader', [
-      '~/assets/scss/config/variable.scss'
+      '~/assets/style/config/variable.scss'
     ]],
     '~/modules/typescript.js'
   ]

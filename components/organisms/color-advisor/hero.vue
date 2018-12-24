@@ -1,8 +1,8 @@
 <template>
-  <div class="hero" :style="{ 'background-image': `url(${$router.options.base}images/color-advisor/hero.jpeg)` }">
+  <div class="hero">
     <div class="hero-message">
-      <h2>BEST. HAIR COLOR. ever</h2>
-      <p>perfect shade is just a few questions away</p>
+      <h2 class="title">BEST. HAIR COLOR. ever</h2>
+      <p class="description">perfect shade is just a few questions away</p>
     </div>
   </div>
 </template>
@@ -17,10 +17,11 @@ export default class extends Vue {}
 <style lang="scss" scoped>
 .hero {
   position: relative;
+  height: 200px;
   background-repeat: no-repeat;
   background-size:  cover;
   background-position: center center;
-  height: 200px;
+  background-image: url('~assets/image/color-advisor/hero.jpeg');
 
   .hero-message {
     position: absolute;
@@ -30,5 +31,15 @@ export default class extends Vue {}
     padding: 8px;
     background-color: rgba($white, 0.8)
   }
+}
+
+.title {
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.description {
+  color: $very-dark-grayish-blue;
 }
 </style>

@@ -30,7 +30,6 @@ export default class extends Vue {
 .header {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana,
     sans-serif;
-  color: $red;
 }
 
 .cards {

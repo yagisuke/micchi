@@ -2,7 +2,7 @@
   <div class="container">
     <header>
       <h1 class="title">
-        <img :src="`${$router.options.base}images/logo.png`" alt="hair color" class="logo" />
+        <img src="~assets/image/logo.png" alt="hair color" class="logo" />
       </h1>
     </header>
     <nuxt/>
@@ -16,7 +16,7 @@
 }
 
 .title {
-  padding: 8px 16px;
+  padding: 4px 16px;
   line-height: 0;
 }
 
